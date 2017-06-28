@@ -106,8 +106,10 @@ a {
 /* 텍스트링크 안내링크 */
 
 .info-menu {
-    background: pink;
     list-style-type: none;
+    text-align: right;
+    position: relative;
+    right: -10px;
 }
 
 .info-menu li,
@@ -116,14 +118,12 @@ a {
 }
 
 .info-menu li {
-    background: lime;
     font-size: 14px;
     text-transform: uppercase;
 }
 
 .info-menu a {
     padding: 10px;
-    background: yellow;
 }
 
 .info-menu li::after {
@@ -134,6 +134,38 @@ a {
 
 .visual {
     height: 120px;
+}
+
+
+/*메인메뉴*/
+
+.main-menu {
+    background: linear-gradient(to bottom, #e5892d 0%, #e0652c 35%, #e0652c 65%, #e5892d 100%);
+    list-style-type: none;
+    border-top: 2px solid #181818;
+    border-radius: 0px 0px 5px 5px;
+    padding-left: 225px;
+    font-size: 1.8rem;
+    height: 45px;
+}
+
+.main-menu ul {
+    list-style-type: none;
+    position: absolute;
+    display: none;
+}
+
+.main-menu>li {
+    float: left;
+}
+
+.main-menu>li>a {
+    font-size: 1.6rem;
+    font-family: "Noto Sans Bold";
+    color: rgba(255, 255, 255, 0.9);
+    padding: 10px 20px;
+    display: block;
+    border-left: 2px solid rgba(255, 255, 255, 0.9);
 }
 
 .main-content {
