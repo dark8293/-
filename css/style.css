@@ -98,7 +98,7 @@ a {
 
 .logo {
     position: absolute;
-    top: 45px;
+    top: 50px;
     left: 60px;
 }
 
@@ -130,10 +130,8 @@ a {
     content: ":";
 }
 
-.info-menu li:last-child::after {}
-
-.visual {
-    height: 120px;
+.info-menu li:last-child::after {
+    content: "";
 }
 
 
@@ -149,12 +147,6 @@ a {
     height: 45px;
 }
 
-.main-menu ul {
-    list-style-type: none;
-    position: absolute;
-    display: none;
-}
-
 .main-menu>li {
     float: left;
 }
@@ -163,9 +155,58 @@ a {
     font-size: 1.6rem;
     font-family: "Noto Sans Bold";
     color: rgba(255, 255, 255, 0.9);
-    padding: 10px 20px;
+    padding: 0px 20px;
     display: block;
+    line-height: 45px;
     border-left: 2px solid rgba(255, 255, 255, 0.9);
+    text-shadow: 1px 1px 0 #181818, 2px 2px 0 #181818, 3px 3px 0 #181818, 4px 4px 0 #181818;
+}
+
+.main-menu>li>a:hover {
+    color: hsla(45, 80%, 70%, 1);
+}
+
+.main-menu>li>a:hover::after {
+    content: "";
+    display: block;
+    border-top: 2px solid #181818;
+}
+
+.main-menu ul {
+    list-style-type: none;
+    position: absolute;
+}
+
+.about-html {
+    display: block;
+}
+
+.about-css {
+    display: none;
+}
+
+.web-standards {
+    display: none;
+}
+
+.wed-accessibility {
+    display: none;
+}
+
+.qna {
+    display: none;
+}
+
+.archive {
+    display: none;
+}
+
+.visual {
+    height: 120px;
+}
+
+.main-menu>li {
+    float: left;
 }
 
 .main-content {
