@@ -109,6 +109,7 @@ a {
     list-style-type: none;
     text-align: right;
     position: relative;
+    font-size: 0;
     right: -10px;
 }
 
@@ -143,7 +144,6 @@ a {
     border-top: 2px solid #181818;
     border-radius: 0px 0px 5px 5px;
     padding-left: 225px;
-    font-size: 1.5rem;
     height: 45px;
 }
 
