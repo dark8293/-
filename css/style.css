@@ -1,6 +1,6 @@
 @charset "utf-8";
 
-/*웹폰트 선언*/
+/* 웹폰트 선언 */
 
 @font-face {
     font-family: 'Noto Sans Regular';
@@ -55,7 +55,7 @@ h6 {
 }
 
 
-/*기본스타일*/
+/* 기본 스타일 */
 
 html {
     font-size: 10px;
@@ -85,7 +85,7 @@ body {
 }
 
 
-/* 링크스타일 */
+/* 링크 스타일 */
 
 a {
     color: inherit;
@@ -93,15 +93,17 @@ a {
 }
 
 
-/* 헤더*/
+/* 헤더 */
 
 .header {
-    min-height: 115px;
     background-color: #fff;
     border-radius: 0 0 15px 15px;
     position: relative;
-    padding: 0 30px;
+    padding: 0 30px 40px 30px;
 }
+
+
+/* 로고 */
 
 .logo {
     position: absolute;
@@ -110,13 +112,13 @@ a {
 }
 
 
-/* 텍스트링크 안내링크 */
+/* 텍스트링크 - 안내링크 */
 
 .info-menu {
     list-style-type: none;
+    font-size: 0;
     text-align: right;
     position: relative;
-    font-size: 0;
     right: -10px;
 }
 
@@ -126,7 +128,7 @@ a {
 }
 
 .info-menu li {
-    font-size: 14px;
+    font-size: 1.4rem;
     text-transform: uppercase;
 }
 
@@ -143,13 +145,13 @@ a {
 }
 
 
-/*메인메뉴*/
+/* 메인 메뉴 */
 
 .main-menu {
     background: linear-gradient(to bottom, #e5892d 0%, #e0652c 35%, #e0652c 65%, #e5892d 100%);
     list-style-type: none;
     border-top: 2px solid #181818;
-    border-radius: 0px 0px 5px 5px;
+    border-radius: 0 0 5px 5px;
     padding-left: 225px;
     height: 45px;
 }
@@ -159,22 +161,26 @@ a {
     position: relative;
 }
 
-.main-menu>li>a {
+.main-menu span {
     font-size: 1.6rem;
     font-family: "Noto Sans Bold";
-    color: rgba(255, 255, 255, 0.9);
-    padding: 0px 20px;
+    color: rgba(255, 255, 255, 0.95);
     display: block;
+    padding: 0 20px;
     line-height: 45px;
     border-left: 2px solid rgba(255, 255, 255, 0.9);
-    text-shadow: 1px 1px 0 #181818, 2px 2px 0 #181818, 3px 3px 0 #181818, 4px 4px 0 #181818;
+    text-shadow: 1px 0px 0 #000, 0px 1px 0 #000, -1px 0px 0 #000, 0px -1px 0 #000;
 }
 
-.main-menu>li>a:hover {
-    color: hsla(45, 80%, 70%, 1);
+.main-menu span:hover,
+.main-menu span:focus {
+    /*color: hsla(45, 80%, 80%, 1);*/
+    color: #ff0;
+    outline: 0;
 }
 
-.main-menu>li>a:hover::after {
+.main-menu span:hover::after,
+.main-menu span:focus::after {
     content: "";
     display: block;
     border-top: 2px solid #181818;
@@ -184,7 +190,7 @@ a {
     list-style-type: none;
     position: absolute;
     white-space: nowrap;
-    top: 47px;
+    top: 45px;
 }
 
 .main-menu ul li {
@@ -203,38 +209,95 @@ a {
     content: "c";
 }
 
-.about-html {
+.main-menu ul a {
+    padding: 8px 15px 7px 0;
     display: block;
-    top: 0;
+}
+
+.about-html {
+    display: none;
     left: 0;
 }
 
 .about-css {
     display: none;
+    left: 0;
 }
 
 .web-standards {
     display: none;
+    left: 0;
 }
 
-.wed-accessibility {
+.web-accessibility {
     display: none;
+    left: -140px;
 }
 
 .qna {
     display: none;
+    left: -170px;
 }
 
 .archive {
     display: none;
+    right: -25px;
+}
+
+
+/* 비쥬얼 */
+
+@keyframes text-ani {
+    0% {
+        font-size: 12px;
+        color: rgba(0, 0, 0, 0);
+        transform: translate(0, 0);
+    }
+    100% {
+        font-size: 24px;
+        color: rgba(0, 0, 0, 1);
+        transform: translate(400px, 60px);
+    }
+    ;
 }
 
 .visual {
     height: 120px;
+    position: relative;
 }
 
-.main-menu>li {
-    float: left;
+.visual::before,
+.visual::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 120px;
+}
+
+.visual::before {
+    background: url(images/ani_flower_01.png) no-repeat 0px -10px, url(images/ani_flower_02.png) no-repeat 670px 0;
+}
+
+.visual::after {
+    background: url(images/ani_flower_03.png) no-repeat 400px 15px, url(images/ani_flower_04.png) no-repeat 800px 0;
+}
+
+.visual-text {
+    /*
+    display: inline-block;
+    position: absolute;
+    animation-name: text-ani;
+    animation-duration: 5s;
+    animation-fill-mode: forwards;
+    animation-delay: 0.5s;
+    color: rgba(0, 0, 0, 0);
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: 3;
+    animation-direction: alternate;
+    */
+    animation: text-ani 1.5s forwards 0.5s ease-in-out 3 alternate;
 }
 
 .main-content {
