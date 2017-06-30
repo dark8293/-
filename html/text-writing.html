@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>텍스트 에니메이션</title>
+    <style>
+        body {
+            margin: 50px;
+            background: silver;
+            font-family: sans-serif;
+        }
+        
+        h1 {
+            font-size: 50px;
+        }
+        
+        @keyframes text-ani {
+            0% {
+                width: 0px;
+            }
+            100% {
+                width: 1100px;
+            }
+        }
+        
+        p {
+            font-size: 60px;
+            white-space: nowrap;
+            animation: text-ani 5s;
+            overflow: hidden;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Text Writing animation</h1>
+    <p>Welcome to CSS Animation 활용</p>
+</body>
+
+</html>
